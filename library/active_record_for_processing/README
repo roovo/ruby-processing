@@ -1,0 +1,45 @@
+Activerecord for Processing
+---------------------------
+
+I hacked this together as I got peed off with using java
+to handle accessing my mySQL databases from inside processing
+and sorely missed the wonderful powers of ActiveRecord.
+
+The library includes a copy of ActiveRecord and ActiveSupport 
+taken from rails (version 2.1.0).
+
+http://github.com/rails/rails
+
+I've only tested this using mysql - but it should work for 
+other database types supported by ActiveRecord.  Just set 
+up the config/database.yml file accordingly (see the rails 
+documentation if you don't know how to do this)
+
+http://api.rubyonrails.org/
+
+To use:
+
+  (there's an example 'active_record_test.rb' in the samples folder)
+
+  * place the active_record_for_processing directory 
+    in the ruby-processing/library folder.
+    
+  * set up your database configuration in config/database.yml.
+
+  * load the library in your processing app:
+
+    class MyProcessingApp < Processing::App
+
+      load_ruby_library "active_record_for_processing"
+
+      # do interesting stuff.....
+    end
+
+And you should be able to declare an ActiveRecord 
+class in the normal way and use it:
+
+class MyModel < ActiveRecord::Base
+end
+
+see the rails api documentation for info on how to 
+use ActiveRecord (http://api.rubyonrails.org/).

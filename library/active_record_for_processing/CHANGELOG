@@ -1,0 +1,5 @@
+Version 0.1
+-----------
+My initial hack.  I've not used it apart from checking I can call 
+find on an active record model (which worked).  Thought I'd share it now 
+before I start to use it in ernest otherwise I may never get round to it :)

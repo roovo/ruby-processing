@@ -1,0 +1,7 @@
+# I've only tested this with mySQL but other adapters should work
+
+adapter:  mysql
+database: 
+username: 
+password:
+host:     localhost
