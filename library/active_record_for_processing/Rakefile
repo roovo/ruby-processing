@@ -1,0 +1,25 @@
+dir = File.dirname(__FILE__)
+$:.unshift(File.expand_path("#{dir}/lib"))
+require "git_rails"
+
+def git
+  ActiveRecordForProcessing::GitRails.new
+end
+
+namespace :git_rails do
+  
+  desc "Fetch activerecord and activesupport"
+  task :fetch_rails do
+    git.fetch_from_rails
+  end
+
+  desc "Remove rails related directories"
+  task :clean do
+    git.clean
+  end
+
+  desc "Clean first then fetch rails"
+  task :clean_fetch_rails => :clean do
+    git.fetch_from_rails
+  end
+end
