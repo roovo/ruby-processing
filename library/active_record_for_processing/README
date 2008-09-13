@@ -5,11 +5,6 @@ I hacked this together as I got peed off with using java
 to handle accessing my mySQL databases from inside processing
 and sorely missed the wonderful powers of ActiveRecord.
 
-The library includes a copy of ActiveRecord and ActiveSupport 
-taken from rails (version 2.1.0).
-
-http://github.com/rails/rails
-
 I've only tested this using mysql - but it should work for 
 other database types supported by ActiveRecord.  Just set 
 up the config/database.yml file accordingly (see the rails 
@@ -17,12 +12,25 @@ documentation if you don't know how to do this)
 
 http://api.rubyonrails.org/
 
-To use:
+Installing ActiveRecord
+-----------------------
+A rake task has been included to install ActiveRecord and ActiveSupport
+into the library folder.  To run this:
+
+cd ruby-processing/library/active_record_for_processing
+rake git_rails:fetch_rails
+
+This should download rails and install the activerecord and activesupport
+directories.
+
+Usage
+-----
 
   (there's an example 'active_record_test.rb' in the samples folder)
 
-  * place the active_record_for_processing directory 
-    in the ruby-processing/library folder.
+  * ensure that the active_record_for_processing directory is
+    in the ruby-processing/library folder and it contains the 
+    activerecord and activesupport directories.
     
   * set up your database configuration in config/database.yml.
 

@@ -1,3 +1,9 @@
+Version 0.1.1
+-------------
+removed activesupport and activerecord directories from the
+active_record_for_processing folder and added a rake task to
+install them from rails@github.
+
 Version 0.1
 -----------
 My initial hack.  I've not used it apart from checking I can call 
